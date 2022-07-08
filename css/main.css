@@ -1,0 +1,310 @@
+:root {
+  --green: #009879;
+  --bg-body: rgb(250, 250, 250);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  background-color: var(--bg-body);
+  font-family: "Poppins", sans-serif;
+}
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  background-color: var(--green);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  padding: 15px 9%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav .menu {
+  /* width: 40%; */
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+.nav .menu li a {
+  margin-right: 20px;
+  color: rgb(61, 59, 59);
+}
+
+.nav .menu li a:hover,
+.nav .menu li a.active {
+  color: var(--green);
+}
+
+.nav .icon {
+  font-size: 28px;
+  color: var(--green);
+  font-weight: bold;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 7rem 9%;
+}
+
+.container .overview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 10px;
+  margin: 50px 0 10rem 0;
+}
+
+.container .overview .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  border: 1px solid silver;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.container .overview .box .total {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.container .overview .box .title {
+  color: rgb(122, 118, 118);
+}
+
+.navbar-bottom {
+  display: none;
+}
+
+.logout-btn {
+  cursor: pointer;
+  color: rgb(61, 59, 59);
+}
+
+.logout-btn:hover {
+  color: var(--green);
+}
+
+/* tulis catatan 
+ */
+
+.tulis-catatan {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 30px 20px;
+  margin: 30px 0;
+  background-color: #fff;
+}
+
+.tulis-catatan .box {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.tulis-catatan .box label {
+  color: rgb(47, 42, 42);
+}
+
+.tulis-catatan .box input {
+  width: 100%;
+  border: 2px solid silver;
+  border-radius: 5px;
+  font-size: 15px;
+  height: 40px;
+  padding: 0 10px;
+}
+.tulis-catatan .box input:focus {
+  border-color: var(--green);
+}
+
+.submit-btn {
+  margin-top: 30px;
+  font-size: medium;
+}
+
+th.sort {
+  cursor: pointer;
+}
+
+.th-sort-asc::after {
+  content: "\25b4";
+}
+
+.th-sort-desc::after {
+  content: "\25be";
+}
+
+.th-sort-asc::after,
+.th-sort-desc::after {
+  margin-left: 5px;
+}
+
+.th-sort-asc,
+.th-sort-desc {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* lihat catatan  */
+.daftar-catatan {
+  width: 100%;
+  margin: 25px 0;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  min-width: 600px;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.daftar-catatan thead tr {
+  background-color: var(--green);
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.daftar-catatan th,
+.daftar-catatan td {
+  padding: 12px 15px;
+}
+
+.daftar-catatan tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.daftar-catatan tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+.daftar-catatan tbody tr:last-child {
+  border-bottom: 2px solid var(--green);
+}
+
+.search-container {
+  display: flex;
+  justify-content: end;
+  margin: 20px 0;
+  padding: 0 5px;
+}
+
+.search-container .wrapper {
+  background-color: rgb(255, 255, 255);
+  min-width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--green);
+  overflow: hidden;
+}
+
+.search-container .wrapper .search {
+  width: 90%;
+  height: 100%;
+  font-size: 15px;
+  padding: 0 10px;
+}
+
+.search-container .wrapper label {
+  width: 10%;
+  height: 100%;
+  font-size: 15px;
+  color: var(--green);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 999px) {
+  .nav .menu,
+  .logout-btn {
+    display: none;
+  }
+
+  .container {
+    padding: 6rem 7%;
+  }
+
+  .container h2 {
+    font-size: 1.5rem;
+  }
+
+  .navbar-bottom {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    background-color: #fff;
+  }
+
+  .navbar-bottom a i {
+    font-size: 20px;
+    color: rgb(61, 59, 59);
+  }
+
+  .navbar-bottom a i:hover,
+  .navbar-bottom a i.active {
+    color: var(--green);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav .icon {
+    font-size: 25px;
+  }
+  .container {
+    padding-top: 7rem;
+  }
+
+  .container .overview .box {
+    min-width: 222px;
+    min-height: 165px;
+    padding: 10px;
+  }
+
+  .main-table {
+    overflow-x: scroll;
+  }
+
+  .daftar-catatan {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search-container .wrapper {
+    min-width: 90vw;
+  }
+}

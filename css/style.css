@@ -1,0 +1,140 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap"); */
+
+:root {
+  --green: #009879;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--green);
+  font-family: "Poppins", sans-serif;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  background-color: var(--green);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 900px;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  row-gap: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container .image img {
+  border-radius: 5px;
+  object-fit: cover;
+  width: 110%;
+  height: 70vh;
+}
+
+.container .login-form {
+  margin: 10px;
+  width: 50%;
+}
+
+.container .login-form .heading {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.container .login-form .heading h1 {
+  font-size: 30px;
+}
+
+.container .login-form .heading p {
+  margin-top: 5px;
+  color: silver;
+}
+
+.container .login-form .heading p a {
+  font-weight: bold;
+  color: var(--green);
+}
+
+.container .login-form .input-box {
+  padding: 0 10px;
+  position: relative;
+  margin: 20px 0;
+}
+
+.container .login-form .input-box label {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  transition: 0.1s;
+}
+
+.container .login-form .input-box input {
+  text-transform: none;
+  font-size: 15px;
+  color: rgb(53, 50, 50);
+  height: 30px;
+  width: 100%;
+  border-bottom: 2px solid silver;
+}
+
+.container .login-form .input-box input:invalid {
+  background: none;
+  outline: none;
+}
+
+.container .login-form .input-box input:focus {
+  border-color: var(--green);
+}
+
+.container .login-form .input-box input:focus ~ label,
+.container .login-form .input-box input:valid ~ label {
+  font-size: 15px;
+  color: #666;
+  top: -15px;
+}
+
+.submit {
+  margin: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .container .image img {
+    display: none;
+  }
+
+  .container .login-form .heading h1 {
+    font-size: 25px;
+  }
+
+  .container .login-form {
+    margin: 5px;
+    width: 100%;
+  }
+
+  .container {
+    width: 90vw;
+  }
+}
